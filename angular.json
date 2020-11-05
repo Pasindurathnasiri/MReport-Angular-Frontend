@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MReport"
+    }
+  },
+  "defaultProject": "MReport",
+  "cli": {
+    "analytics": "a9217cef-0f32-462e-a8b1-c0804c025d56"
+  }
 }
