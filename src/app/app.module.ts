@@ -31,6 +31,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
 import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 
 @NgModule({
   declarations: [
@@ -62,11 +64,14 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     LoginComponent,
     RegisterDoctorComponent,
     RegisterHospitalComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    Admissionpatient
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
