@@ -19,10 +19,10 @@ import { ReportsComponent } from './Admin/reports/reports.component';
 import { ScheduleappointmentsComponent } from './Admin/scheduleappointments/scheduleappointments.component';
 import { ScheduleappointmentsviewComponent } from './Admin/scheduleappointmentsview/scheduleappointmentsview.component';
 import { ViewpatientsComponent } from './Admin/viewpatients/viewpatients.component';
-import { RegisterhospitalComponent } from './SuperAdmin/registerhospital/registerhospital.component';
-import { ReportComponent } from './SuperAdmin/report/report.component';
-import { ScheduleappointmentComponent } from './SuperAdmin/scheduleappointment/scheduleappointment.component';
-import { ScheduleappointmentviewComponent } from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component';
+import { SARegisterhospitalComponent } from './SuperAdmin/registerhospital/registerhospital.component';
+import { SAReportComponent } from './SuperAdmin/report/report.component';
+import { SAScheduleappointmentComponent } from './SuperAdmin/scheduleappointment/scheduleappointment.component';
+import { SAScheduleappointmentviewComponent } from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component';
 import { ViewhospitalsComponent } from './SuperAdmin/viewhospitals/viewhospitals.component';
 import { ViewpatientComponent } from './SuperAdmin/viewpatient/viewpatient.component';
 import { AboutComponent } from './about/about.component';
@@ -33,6 +33,7 @@ import { RegisterHospitalComponent } from './register-hospital/register-hospital
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
+import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -53,10 +54,10 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
     ScheduleappointmentsComponent,
     ScheduleappointmentsviewComponent,
     ViewpatientsComponent,
-    RegisterhospitalComponent,
-    ReportComponent,
-    ScheduleappointmentComponent,
-    ScheduleappointmentviewComponent,
+    SARegisterhospitalComponent,
+    SAReportComponent,
+    SAScheduleappointmentComponent,
+    SAScheduleappointmentviewComponent,
     ViewhospitalsComponent,
     ViewpatientComponent,
     AboutComponent,
@@ -65,7 +66,8 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
     RegisterDoctorComponent,
     RegisterHospitalComponent,
     RegisterUserComponent,
-    Admissionpatient
+    Admissionpatient,
+    SaDashboardComponent
   ],
   imports: [
     BrowserModule,
