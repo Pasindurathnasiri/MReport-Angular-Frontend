@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './scheduleappointment.component.html',
   styleUrls: ['./scheduleappointment.component.css']
 })
-export class ScheduleappointmentComponent implements OnInit {
+export class SAScheduleappointmentComponent implements OnInit {
 
   constructor() { }
 
