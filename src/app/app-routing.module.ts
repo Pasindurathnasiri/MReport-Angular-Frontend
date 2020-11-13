@@ -21,6 +21,10 @@ import {SAScheduleappointmentComponent} from './SuperAdmin/scheduleappointment/s
 import { SAScheduleappointmentviewComponent} from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component'
 import {ViewhospitalsComponent} from './SuperAdmin/viewhospitals/viewhospitals.component'
 import { ViewpatientComponent } from './SuperAdmin/viewpatient/viewpatient.component';
+import {RegisterDoctorComponent} from './register-doctor/register-doctor.component'
+import {RegisterHospitalComponent} from './register-hospital/register-hospital.component';
+import {RegisterUserComponent} from './register-user/register-user.component';
+import {AboutComponent} from './about/about.component'
 
 const routes: Routes = [
   {path:'',component:FrontpageComponent},
@@ -43,6 +47,11 @@ const routes: Routes = [
   {path:'sa-viewscheduleappointments', component:SAScheduleappointmentviewComponent},
   {path:'sa-viewhospitals', component:ViewhospitalsComponent},
   {path:'sa-view-patients', component:ViewpatientComponent},
+  {path:'reg-dotor',component:RegisterDoctorComponent},
+  {path:'reg-hospital',component:RegisterHospitalComponent},
+  {path:'reg-patient',component:RegisterUserComponent},
+  {path:'about',component:AboutComponent},
+ 
   
   
 ];

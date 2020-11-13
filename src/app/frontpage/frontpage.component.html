@@ -25,35 +25,39 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-      <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             
           </ul>
           <div class="d-flex align-items-end flex-column">
           <ul class="navbar-nav my-2 my-lg-0 ">
             <li class="nav-item active">
-              <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">About</a>
+              <a class="nav-link" routerLink="/about">About</a>
             </li>
             <li>
-              <a class="nav-link" href="">Login</a>
+              <a class="nav-link" routerLink="/login">Login</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sign Up
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SignUp
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Hospital</a>
-                <a class="dropdown-item" href="#">Doctor</a>
-                <a class="dropdown-item" href="#">Patient</a>
+                <a class="dropdown-item" routerLink="/reg-patient">Patient</a>
+                <a class="dropdown-item" routerLink="/reg-doctor">Doctor</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" routerLink="/reg-hospital">Hospital</a>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div class="row">
+      <br><br><br>
+      <button class="btn btn-primary" style="margin-left: 400px;">Click</button>
+    </div>
 </body>
 </html>
