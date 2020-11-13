@@ -16,7 +16,7 @@
     
   <!-- nav bar start -->
   <nav class="navbar navbar-expand-lg navbar-light color">
-    <img class="img" style ="height: 3%; width: 3%;" href="../frontpage/frontpage.html" src="../images/red_logo.png">
+    <img class="img" style ="height: 3%; width: 3%;" href="../frontpage/frontpage.html" src="../../assets/red_logo.png">
     <a class="navbar-brand" href="../frontpage/frontpage.html">M-Report</a>
     
 
@@ -33,24 +33,21 @@
       <div class="d-flex align-items-end flex-column">
       <ul class="navbar-nav my-2 my-lg-0 ">
         <li class="nav-item active">
-          <a class="nav-link" href="../frontpage/frontpage.html" >Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../frontpage/about.html">About</a>
+          <a class="nav-link" routerLink="/about">About</a>
         </li>
         <li>
-          <a class="nav-link" href="../Login/login.html">Login</a>
+          <a class="nav-link" routerLink="/login">Login</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Sign Up
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Hospital</a>
-            <a class="dropdown-item" href="#">Doctor</a>
-            <a class="dropdown-item" href="#">Patient</a>
-          </div>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">Sign Up</button>
+           <mat-menu #menu="matMenu">
+             <button mat-menu-item routerLink="/reg-patient">Patient</button>
+             <button mat-menu-item routerLink="/reg-dotor">Doctor</button>
+             <button mat-menu-item routerLink="/reg-hospital">Hospital</button>
+           </mat-menu>
         </li>
       </ul>
     </div>
@@ -121,7 +118,7 @@
 
         <!-- Content -->
         <h6 class="text-uppercase font-weight-bold">Doctor Chaneling</h6>
-        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style=>
+        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
         <p>The content or descriptio about the organization</p>
 
       </div>

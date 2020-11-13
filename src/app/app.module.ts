@@ -38,6 +38,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 import { fromEventPattern } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,10 @@ import { fromEventPattern } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

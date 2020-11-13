@@ -40,24 +40,18 @@
             <li>
               <a class="nav-link" routerLink="/login">Login</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                SignUp
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" routerLink="/reg-patient">Patient</a>
-                <a class="dropdown-item" routerLink="/reg-doctor">Doctor</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" routerLink="/reg-hospital">Hospital</a>
-              </div>
+            <li>
+              <button mat-button [matMenuTriggerFor]="menu">Sign Up</button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/reg-patient">Patient</button>
+                <button mat-menu-item routerLink="/reg-dotor">Doctor</button>
+                <button mat-menu-item routerLink="/reg-hospital">Hospital</button>
+              </mat-menu>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="row">
-      <br><br><br>
-      <button class="btn btn-primary" style="margin-left: 400px;">Click</button>
-    </div>
+    
 </body>
 </html>
