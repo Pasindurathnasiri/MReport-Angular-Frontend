@@ -21,6 +21,9 @@ import { ScheduleappointmentsviewComponent } from './Admin/scheduleappointmentsv
 import { ViewpatientsComponent } from './Admin/viewpatients/viewpatients.component';
 import { SARegisterhospitalComponent } from './SuperAdmin/registerhospital/registerhospital.component';
 import { SAReportComponent } from './SuperAdmin/report/report.component';
+import {SADoctorprofileComponent} from './SuperAdmin/doctorprofile/doctorprofile.component'
+import {SARegisterdoctorComponent} from './SuperAdmin/registerdoctor/registerdoctor.component';
+import { SARegisterpatientComponent} from './SuperAdmin/registerpatient/registerpatient.component'
 import { SAScheduleappointmentComponent } from './SuperAdmin/scheduleappointment/scheduleappointment.component';
 import { SAScheduleappointmentviewComponent } from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component';
 import { ViewhospitalsComponent } from './SuperAdmin/viewhospitals/viewhospitals.component';
@@ -34,6 +37,10 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
+import { fromEventPattern } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -67,13 +74,19 @@ import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.com
     RegisterHospitalComponent,
     RegisterUserComponent,
     Admissionpatient,
-    SaDashboardComponent
+    SaDashboardComponent,
+    SARegisterpatientComponent,
+    SARegisterdoctorComponent,
+    SADoctorprofileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
