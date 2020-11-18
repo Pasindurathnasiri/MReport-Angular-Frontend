@@ -16,15 +16,9 @@ export class RegisterDoctorComponent implements OnInit {
   public readonly docGroup:FormGroup;
   
   AllDoctors: any =[];
-  private docUrl = 'https://localhost:44373/api/Doctors';
   
-
-
   constructor(private doctorService:DoctorService,private http:HttpClient,private formBuilder: FormBuilder) { 
-    console.log("hi");
-   this.doctorService.getAllDoctors().subscribe(data=>{
-     console.log(data);
-   })
+    
 
    this.docGroup = this.formBuilder.group({
     medRegNo: [],
@@ -56,11 +50,12 @@ export class RegisterDoctorComponent implements OnInit {
         console.log("Registration Faild"+err);
       }else{
         this.serverErrorMessages = 'Something went Wrong';
-        location.reload();
-        window.alert("Doctor Details Registered Successfully..!")
+        
+        
       }
     });
-    
+    window.alert("Doctor Details Registered Successfully..!");
+    location.reload();
   }
 
 }
