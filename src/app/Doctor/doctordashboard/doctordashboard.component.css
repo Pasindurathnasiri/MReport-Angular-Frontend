@@ -1,0 +1,10 @@
+.docsidebar{
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(4, 49, 4);
+    position: sticky;
+}
+.docpage{
+    width: auto;
+    height: 100%;
+}
