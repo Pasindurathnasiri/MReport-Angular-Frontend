@@ -1,5 +1,5 @@
 export class Doctor {
-    medRegNo: string;
+  medRegNo: string;
   firstName: string;
   dob: Date;
   lastName: string;

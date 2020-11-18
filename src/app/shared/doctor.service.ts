@@ -18,7 +18,7 @@ export class DoctorService {
     return this.http.get(environment.apiBaseUrl+'/Doctors');
   }
 
-  regDoctor(){
-    
+  regDoctor(doctor:Doctor){
+    return this.http.post(environment.apiBaseUrl+'/Doctors',doctor,this.noAuthHeader);
   }
 }
