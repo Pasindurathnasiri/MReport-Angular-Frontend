@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
-import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
-import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
 import { PatientaboutdocComponent } from './Patient/patientaboutdoc/patientaboutdoc.component';
 import { PatientaboutdocspecialistsComponent } from './Patient/patientaboutdocspecialists/patientaboutdocspecialists.component';
 import { PatientchannelingComponent } from './Patient/patientchanneling/patientchanneling.component';
@@ -33,6 +30,7 @@ import { RegisterDoctorComponent } from './register-doctor/register-doctor.compo
 import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 
+import { DoctorsidenavComponent } from './Doctor/doctorsidenav/doctorsidenav.component';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 
@@ -61,7 +59,7 @@ const routes: Routes = [
   {path:'reg-hospital',component:RegisterHospitalComponent},
   {path:'reg-patient',component:RegisterUserComponent},
   {path:'about',component:AboutComponent},
-  {path:'dd' ,component:DoctordashboardComponent},
+  {path:'dd' ,component:DoctorsidenavComponent},
  
   
   
@@ -74,38 +72,7 @@ const routes: Routes = [
 export class AppRoutingModule {}
 
  export const RoutingComponents= [ 
-                                    DocpatientsComponent,
-                                    DoctordashboardComponent,
-                                    DocvaccinesComponent,
-                                    PatientaboutdocComponent,
-                                    PatientaboutdocspecialistsComponent,
-                                    PatientchannelingComponent,
-                                    PatientdashboardComponent,
-                                    PatientvaccineComponent,
-                                    DashboardComponent,
-                                    DoctorprofileComponent,
-                                    RegisterdoctorComponent,
-                                    RegisterpatientComponent,
-                                    ReportsComponent,
-                                    ScheduleappointmentsComponent,
-                                    ScheduleappointmentsviewComponent,
-                                    ViewpatientsComponent,
-                                    SARegisterhospitalComponent,
-                                    SAReportComponent,
-                                    SAScheduleappointmentComponent,
-                                    SAScheduleappointmentviewComponent,
-                                    ViewhospitalsComponent,
-                                    ViewpatientComponent,
-                                    AboutComponent,
-                                    FrontpageComponent,
-                                    LoginComponent,
-                                    RegisterDoctorComponent,
-                                    RegisterHospitalComponent,
-                                    RegisterUserComponent,
-                                    Admissionpatient,
-                                    SaDashboardComponent,
-                                    SARegisterpatientComponent,
-                                    SARegisterdoctorComponent,
-                                    SADoctorprofileComponent,
+                                    DoctorsidenavComponent,
+                                    
 
  ]
