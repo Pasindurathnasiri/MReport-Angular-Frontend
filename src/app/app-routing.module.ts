@@ -1,30 +1,40 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { from, fromEventPattern } from 'rxjs';
-import {FrontpageComponent} from '../app/frontpage/frontpage.component';
-import {LoginComponent} from './login/login.component';
-import {DashboardComponent} from './Admin/dashboard/dashboard.component'
+
+import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
+import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
+import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
+import { PatientaboutdocComponent } from './Patient/patientaboutdoc/patientaboutdoc.component';
+import { PatientaboutdocspecialistsComponent } from './Patient/patientaboutdocspecialists/patientaboutdocspecialists.component';
+import { PatientchannelingComponent } from './Patient/patientchanneling/patientchanneling.component';
+import { PatientdashboardComponent } from './Patient/patientdashboard/patientdashboard.component';
+import { PatientvaccineComponent } from './Patient/patientvaccine/patientvaccine.component';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
 import { DoctorprofileComponent } from './Admin/doctorprofile/doctorprofile.component';
 import { RegisterdoctorComponent } from './Admin/registerdoctor/registerdoctor.component';
 import { RegisterpatientComponent } from './Admin/registerpatient/registerpatient.component';
+import { ReportsComponent } from './Admin/reports/reports.component';
 import { ScheduleappointmentsComponent } from './Admin/scheduleappointments/scheduleappointments.component';
 import { ScheduleappointmentsviewComponent } from './Admin/scheduleappointmentsview/scheduleappointmentsview.component';
 import { ViewpatientsComponent } from './Admin/viewpatients/viewpatients.component';
-import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
-import { SADoctorprofileComponent } from './SuperAdmin/doctorprofile/doctorprofile.component'
-import { SARegisterdoctorComponent } from './SuperAdmin/registerdoctor/registerdoctor.component'
-import { SARegisterhospitalComponent} from './SuperAdmin/registerhospital/registerhospital.component'
-import { SARegisterpatientComponent } from './SuperAdmin/registerpatient/registerpatient.component'
-import {SAReportComponent} from './SuperAdmin/report/report.component';
-import {SaDashboardComponent} from './SuperAdmin/sa-dashboard/sa-dashboard.component'
-import {SAScheduleappointmentComponent} from './SuperAdmin/scheduleappointment/scheduleappointment.component'
-import { SAScheduleappointmentviewComponent} from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component'
-import {ViewhospitalsComponent} from './SuperAdmin/viewhospitals/viewhospitals.component'
+import { SARegisterhospitalComponent } from './SuperAdmin/registerhospital/registerhospital.component';
+import { SAReportComponent } from './SuperAdmin/report/report.component';
+import {SADoctorprofileComponent} from './SuperAdmin/doctorprofile/doctorprofile.component'
+import {SARegisterdoctorComponent} from './SuperAdmin/registerdoctor/registerdoctor.component';
+import { SARegisterpatientComponent} from './SuperAdmin/registerpatient/registerpatient.component'
+import { SAScheduleappointmentComponent } from './SuperAdmin/scheduleappointment/scheduleappointment.component';
+import { SAScheduleappointmentviewComponent } from './SuperAdmin/scheduleappointmentview/scheduleappointmentview.component';
+import { ViewhospitalsComponent } from './SuperAdmin/viewhospitals/viewhospitals.component';
 import { ViewpatientComponent } from './SuperAdmin/viewpatient/viewpatient.component';
-import {RegisterDoctorComponent} from './register-doctor/register-doctor.component'
-import {RegisterHospitalComponent} from './register-hospital/register-hospital.component';
-import {RegisterUserComponent} from './register-user/register-user.component';
-import {AboutComponent} from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { FrontpageComponent } from './frontpage/frontpage.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
+import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
+
+import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
+import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 
 const routes: Routes = [
   {path:'',component:FrontpageComponent},
@@ -51,6 +61,7 @@ const routes: Routes = [
   {path:'reg-hospital',component:RegisterHospitalComponent},
   {path:'reg-patient',component:RegisterUserComponent},
   {path:'about',component:AboutComponent},
+  {path:'dd' ,component:DoctordashboardComponent},
  
   
   
@@ -60,4 +71,41 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
+
+ export const RoutingComponents= [ 
+                                    DocpatientsComponent,
+                                    DoctordashboardComponent,
+                                    DocvaccinesComponent,
+                                    PatientaboutdocComponent,
+                                    PatientaboutdocspecialistsComponent,
+                                    PatientchannelingComponent,
+                                    PatientdashboardComponent,
+                                    PatientvaccineComponent,
+                                    DashboardComponent,
+                                    DoctorprofileComponent,
+                                    RegisterdoctorComponent,
+                                    RegisterpatientComponent,
+                                    ReportsComponent,
+                                    ScheduleappointmentsComponent,
+                                    ScheduleappointmentsviewComponent,
+                                    ViewpatientsComponent,
+                                    SARegisterhospitalComponent,
+                                    SAReportComponent,
+                                    SAScheduleappointmentComponent,
+                                    SAScheduleappointmentviewComponent,
+                                    ViewhospitalsComponent,
+                                    ViewpatientComponent,
+                                    AboutComponent,
+                                    FrontpageComponent,
+                                    LoginComponent,
+                                    RegisterDoctorComponent,
+                                    RegisterHospitalComponent,
+                                    RegisterUserComponent,
+                                    Admissionpatient,
+                                    SaDashboardComponent,
+                                    SARegisterpatientComponent,
+                                    SARegisterdoctorComponent,
+                                    SADoctorprofileComponent,
+
+ ]
