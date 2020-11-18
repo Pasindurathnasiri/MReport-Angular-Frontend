@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpHandler } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule ,RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -94,7 +96,9 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
