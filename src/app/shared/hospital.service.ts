@@ -14,7 +14,7 @@ export class HospitalService {
   constructor(private http: HttpClient) { }
 
   getAllHospitals(){
-
+    return this.http.get(environment.apiBaseUrl+'/Hospitals');
   }
 
   regHospital(hospital:Hospital){
