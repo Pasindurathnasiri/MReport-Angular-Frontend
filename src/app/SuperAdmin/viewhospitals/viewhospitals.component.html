@@ -289,6 +289,18 @@ font-style: italic;
                             
                                                         </tr>
                                                     </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let data of allHospitals">
+                                                            <td>{{data.hosRegNo}}</td>
+                                                            <td>{{data.hospitalName}}</td>
+                                                            <td>{{data.address}}</td>
+                                                            <td>{{data.district}}</td>
+                                                            <td>{{data.email}}</td>
+                                                            <td>{{data.telephone}}</td>
+                                                            <td>{{data.ownerName}}</td>
+     
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>

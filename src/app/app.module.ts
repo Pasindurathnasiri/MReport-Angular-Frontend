@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpHandler } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule ,RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
-import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
-import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { fromEventPattern } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 import { PatientaboutdocComponent } from './Patient/patientaboutdoc/patientaboutdoc.component';
 import { PatientaboutdocspecialistsComponent } from './Patient/patientaboutdocspecialists/patientaboutdocspecialists.component';
 import { PatientchannelingComponent } from './Patient/patientchanneling/patientchanneling.component';
@@ -34,20 +40,19 @@ import { LoginComponent } from './login/login.component';
 import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
 import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
+
+import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
+import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
+import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
-import { fromEventPattern } from 'rxjs';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DocpatientsComponent,
-    DoctordashboardComponent,
-    DocvaccinesComponent,
+    RoutingComponents,
+
+    
     PatientaboutdocComponent,
     PatientaboutdocspecialistsComponent,
     PatientchannelingComponent,
@@ -77,7 +82,12 @@ import {MatButtonModule} from '@angular/material/button';
     SaDashboardComponent,
     SARegisterpatientComponent,
     SARegisterdoctorComponent,
-    SADoctorprofileComponent
+    SADoctorprofileComponent,
+
+    DocpatientsComponent,
+    DoctordashboardComponent,
+    DocvaccinesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -86,7 +96,9 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
