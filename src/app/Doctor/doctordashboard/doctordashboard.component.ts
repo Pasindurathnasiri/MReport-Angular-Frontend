@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
+import { DoctorService } from '../doctor.service'
 
 @Component({
   selector: 'app-doctordashboard',
@@ -11,5 +13,7 @@ export class DoctordashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }

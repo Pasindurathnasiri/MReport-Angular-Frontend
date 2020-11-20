@@ -44,6 +44,7 @@ import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboa
 import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
