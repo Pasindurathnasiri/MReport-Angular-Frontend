@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorsidenavComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   public truec = false;
 
   ngOnInit(): void {
+    
   }
+  
 
   das(){
     this.truec = true;
