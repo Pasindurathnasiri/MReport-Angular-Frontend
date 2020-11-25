@@ -1,20 +1,18 @@
 <!-- Main Sidebar Container -->
-<div class="Container docpage">
+<div class="Container">
 
     
-    <div style="background-color: rgb(4, 49, 4);">
+    <div style="background-color: rgb(4, 49, 4); text-align: center;">
 
         <!-- Sidebar user (optional) -->
         <div class="brand-image" style="text-align: center;">
-
-            <img src="../dashboard/red_logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"id="logo">
-        
+            <img class="img" style ="height: 40%; width: 40%;" routerLink="/" src="../../assets/red_logo.png">
         </div>
 
         <!-- Brand Logo -->
         <div class="user-panel mt-3 pb-3 mb-3" style="text-align: center;">
             <a class="brand-image ">
-                <img src="../dashboard/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" >
+                <img style ="height: 20%; width: 20%;" src="../../assets/AdminLTELogo.png"  >
                 <span class="brand-text font-weight-light" id="adlogo">Admin</span>
             </a>
         </div>
@@ -29,26 +27,26 @@
                 with font-awesome or any other icon font library -->
 
                 <li class="nav-item has-treeview menu-open">
-                    <a href="doctordashboard.html" class="nav-link" (click) = "das()">
+                    <a href="/dd" class="nav-link" (click) = "das()">
                         <i class="far fa-circle nav-icon"></i>
                         <p class = "link" >Dashboard</p>
                     </a>
                 </li>
             
                 <li class="nav-item">
-                    <a href="docvaccines.html" class="nav-link">
+                    <a href="/dv" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p class = "link" >Vaccine</p>
                     </a>
                 </li>
 
                 <li class="nav-item has-treeview">
-                    <a href="viewpatient.html" class="nav-link">
+                    <a href="/dp" class="nav-link">
                         <p class = "link" >Patients</p>
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview">
+                <!-- <li class="nav-item has-treeview">
                     <a href="scheduleappointments.html" class="nav-link">
                         <p class = "link" >Schedule Appointments</p>
                     </a>
@@ -84,7 +82,7 @@
                     <a href="" class="nav-link">
                         <p class = "link" >Calendar</p>
                     </a>
-                </li>
+                </li> -->
                 
             </ul>
         </nav>

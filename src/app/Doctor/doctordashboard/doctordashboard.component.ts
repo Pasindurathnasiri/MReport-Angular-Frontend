@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
-import { DoctorService } from '../doctor.service'
+import {DoctorService} from 'src/app/shared/doctor.service';
 
 @Component({
   selector: 'app-doctordashboard',
@@ -9,7 +9,17 @@ import { DoctorService } from '../doctor.service'
 })
 export class DoctordashboardComponent implements OnInit {
 
-  constructor() { }
+  public doctordetail: any = {};
+
+  constructor(private doctorservice : DoctorService) {
+    
+    this.doctorservice.getAllDoctors().subscribe( data =>{
+      console.log(data);
+      this.doctordetail = data;
+      console.log(this.doctordetail);
+    });
+
+   }
 
   ngOnInit(): void {
   }
