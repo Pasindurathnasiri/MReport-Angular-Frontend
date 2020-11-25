@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormBuilder, FormGroup ,Validators, NgForm} from '@angular/forms';
-import {UserService} from '../shared/user.service'
+import { PatientService } from '../shared/patient.service';
 
 @Component({
   selector: 'app-register-user',
@@ -14,26 +14,27 @@ export class RegisterUserComponent implements OnInit {
 
   public readonly patientFormGroup:FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private patientService:UserService) {
+  constructor(private formBuilder: FormBuilder,private patientService:PatientService) {
 
     this.patientFormGroup = this.formBuilder.group({
       patientRegNo:[],
       firstName: [],
       lastName: [],
-      gender:[],
-      maritalSt:[],
-      address:[],
-      district:[],
-      nic:[],
-      email: [], 
+      dob: [Date],
+      nic: [],
+      mobile: [],
       password: [],
-      mobile:[],
-      bloodGroup:[],
-      gType:[],
-      gName:[],
-      gMobile:[],
-      gEmail:[],
-      gAddress:[]
+      email: [],
+      address: [],
+      maritalStatus: [],
+      gender: [],
+      gaurdianType: [],
+      gaurdianName: [],
+      gaurdianMobile: [],
+      gaurdianEmail: [],
+      district: [],
+      bloodGroup: [],
+      condition: []
     });
    }
 
@@ -41,11 +42,10 @@ export class RegisterUserComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.patientFormGroup);
-    this.patientService.addPatient(this.patientFormGroup.value).subscribe(
+    this.patientService.regPatient(this.patientFormGroup.value).subscribe(
       res =>{
         this.showSucessMessage = true;
-        setTimeout(() => this.showSucessMessage =false,4000);
+        console.log(res);
       },
       err => {
         if(err){
@@ -56,6 +56,7 @@ export class RegisterUserComponent implements OnInit {
       }
     );
     window.alert("Patient Added Successfully");
+    location.reload();
   }
 
 }
