@@ -30,9 +30,11 @@ import { RegisterDoctorComponent } from './register-doctor/register-doctor.compo
 import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 
-import { DoctorsidenavComponent } from './Doctor/doctorsidenav/doctorsidenav.component';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
+import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
+import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
+import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
 
 const routes: Routes = [
   {path:'',component:FrontpageComponent},
@@ -59,7 +61,9 @@ const routes: Routes = [
   {path:'reg-hospital',component:RegisterHospitalComponent},
   {path:'reg-patient',component:RegisterUserComponent},
   {path:'about',component:AboutComponent},
-  {path:'dd' ,component:DoctorsidenavComponent},
+  {path:'dp' ,component:DocpatientsComponent},
+  {path:'dd' ,component:DoctordashboardComponent},
+  {path:'dv' ,component:DocvaccinesComponent},
  
   
   
@@ -72,7 +76,9 @@ const routes: Routes = [
 export class AppRoutingModule {}
 
  export const RoutingComponents= [ 
-                                    DoctorsidenavComponent,
+                                    DocpatientsComponent,
+                                    DoctordashboardComponent,
+                                    DocvaccinesComponent
                                     
 
  ]

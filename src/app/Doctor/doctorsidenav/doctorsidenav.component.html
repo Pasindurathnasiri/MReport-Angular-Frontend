@@ -1,8 +1,8 @@
 <!-- Main Sidebar Container -->
-<div class="row docpage">
+<div class="Container docpage">
 
     
-    <div class="col-md-2 docsidebar"  style="background-color: rgb(4, 49, 4);">
+    <div style="background-color: rgb(4, 49, 4);">
 
         <!-- Sidebar user (optional) -->
         <div class="brand-image" style="text-align: center;">
@@ -29,17 +29,17 @@
                 with font-awesome or any other icon font library -->
 
                 <li class="nav-item has-treeview menu-open">
-                    <button class="nav-link" (click) = "das()">
+                    <a href="doctordashboard.html" class="nav-link" (click) = "das()">
                         <i class="far fa-circle nav-icon"></i>
                         <p class = "link" >Dashboard</p>
-                    </button>
+                    </a>
                 </li>
             
                 <li class="nav-item">
-                    <button class="nav-link">
+                    <a href="docvaccines.html" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p class = "link" >Vaccine</p>
-                    </button>
+                    </a>
                 </li>
 
                 <li class="nav-item has-treeview">
@@ -91,10 +91,10 @@
     </div>
 
     <!-- components to be viewd by navbar start -->
-    <div class="col-md-10" >
+    <!-- <div class="col-md-10" >
         <app-doctordashboard *ngIf = "truec"></app-doctordashboard>
         <app-docvaccines></app-docvaccines>
         <app-docpatients></app-docpatients>
-    </div>
+    </div> -->
     <!-- components to be viewd by navbar end -->
 </div>

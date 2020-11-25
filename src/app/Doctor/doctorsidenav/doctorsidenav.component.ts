@@ -8,18 +8,24 @@ import { DoctorService } from '../doctor.service';
 })
 export class DoctorsidenavComponent implements OnInit {
 
-  constructor(private doctorservice : DoctorService) { }
+  constructor(private doctorservice : DoctorService) {
+    
+    this.doctorservice.getDoctorData().subscribe( data =>
+      console.log(data));
+
+   }
 
   public truec = false;
 
   ngOnInit(): void {
+    
   }
 
-  getDoctor_Details()
+  public getDoctor_Details()
   {
-    this.doctorservice.getDoctorData().subscribe( data =>
-      console.warn(data));
+    
   }
+  
 
   das(){
     this.truec = true;
