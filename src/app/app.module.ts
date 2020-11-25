@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpHandler } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule ,RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +45,6 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { DoctorsidenavComponent } from './Doctor/doctorsidenav/doctorsidenav.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
