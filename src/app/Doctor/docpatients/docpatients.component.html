@@ -11,16 +11,16 @@
     </head>
 
 
-    <body style="margin: 0%;">
+    <div class="container-fluid" >
         
-        <div class="row docpage">
+        <div class="row flex-xl-nowrap docpage">
 
             <!-- nav -->
-            <div class="col-md-2 docsidebar" style="overflow: auto;">
+            <div class="col-12 col-md-3 col-xl-2 docsidebar">
                 <app-doctorsidenav></app-doctorsidenav>
             </div>
 
-            <div class="col-md-10" style="overflow: auto;">
+            <div class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 main">
                 <div>
                     <!-- heading -->
                     <h1 class = "text-uppercase font-weight-bold"><u>Doctor_Patient</u></h1>
@@ -65,7 +65,6 @@
                     </div>
                 </div>
                 
-                <br>
                 <!-- footer -->
                 <app-footer></app-footer>
                 
@@ -73,5 +72,5 @@
             
         </div>
 
-    </body>
+    </div>
 </html>
