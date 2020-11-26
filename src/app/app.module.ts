@@ -40,11 +40,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterDoctorComponent } from './register-doctor/register-doctor.component';
 import { RegisterHospitalComponent } from './register-hospital/register-hospital.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
-
-
 import { DoctorsidenavComponent } from './Doctor/doctorsidenav/doctorsidenav.component';
 import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.component';
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -82,9 +81,8 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
     SARegisterpatientComponent,
     SARegisterdoctorComponent,
     SADoctorprofileComponent,
-
-    DoctorsidenavComponent
-    
+    DoctorsidenavComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

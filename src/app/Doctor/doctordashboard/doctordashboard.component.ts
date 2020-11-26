@@ -16,7 +16,7 @@ export class DoctordashboardComponent implements OnInit {
     this.doctorservice.getAllDoctors().subscribe( data =>{
       console.log(data);
       this.doctordetail = data;
-      console.log(this.doctordetail);
+      // console.log(this.doctordetail);
     });
 
    }
