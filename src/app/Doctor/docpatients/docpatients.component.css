@@ -1,13 +1,24 @@
 .docsidebar{
-    height: 100%;
-    overflow-y: auto;
+    height: 100vh;
     background-color: rgb(4, 49, 4);
     position: sticky;
+    z-index: 1000;
+}
+
+.main{
+    position: sticky;
+    height: calc(100vh);
+    overflow-y: auto;
 }
 
 .docpage{
-    width: auto;
-    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 #logo{
