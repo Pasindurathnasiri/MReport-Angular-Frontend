@@ -1,0 +1,37 @@
+.docsidebar{
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(4, 49, 4);
+    position: sticky;
+}
+
+.docpage{
+    width: auto;
+    height: 100%;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+}
+
+#adlogo{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.link{
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    background-color: rgb(4, 49, 4);
+    border: none;
+}
+
+.nav-link:active{
+    background-color: rgb(4, 49, 4);
+    border: none;
+}

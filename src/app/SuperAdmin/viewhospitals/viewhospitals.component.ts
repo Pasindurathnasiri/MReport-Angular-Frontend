@@ -1,4 +1,6 @@
+import { coerceStringArray } from '@angular/cdk/coercion';
 import { Component, OnInit } from '@angular/core';
+import { HospitalService } from '../../shared/hospital.service';
 
 @Component({
   selector: 'app-viewhospitals',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewhospitalsComponent implements OnInit {
 
-  constructor() { }
+  allHospitals:any =[];
+
+  constructor(private hospitalService:HospitalService) {
+    this.hospitalService.getAllHospitals().subscribe(data=>{
+      this.allHospitals=data;
+      console.log(this.allHospitals);
+    })
+   }
 
   ngOnInit(): void {
   }
