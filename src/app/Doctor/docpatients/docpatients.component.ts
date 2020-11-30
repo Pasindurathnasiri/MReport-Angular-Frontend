@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientService } from 'src/app/shared/patient.service'
+import { PatientService } from 'src/app/shared/patient.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-docpatients',
@@ -10,7 +11,10 @@ export class DocpatientsComponent implements OnInit {
 
   patient_details : any = {};
 
-  constructor(private p_service : PatientService) {
+  constructor(
+    private p_service : PatientService,
+    private router : Router
+    ) {
 
     this.p_service.getAllPatient().subscribe(data =>{
       console.log(data);
@@ -19,6 +23,10 @@ export class DocpatientsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  regpatient(){
+    this.router.navigate(['/sa-registerpatient']);
   }
 
 }
