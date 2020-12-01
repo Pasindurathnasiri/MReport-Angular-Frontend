@@ -42,6 +42,7 @@ export class RegisterUserComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.patientFormGroup.value);
     this.patientService.regPatient(this.patientFormGroup.value).subscribe(
       res =>{
         this.showSucessMessage = true;
@@ -56,7 +57,7 @@ export class RegisterUserComponent implements OnInit {
       }
     );
     window.alert("Patient Added Successfully");
-    location.reload();
+    //location.reload();
   }
 
 }

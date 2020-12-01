@@ -282,12 +282,28 @@ font-style: italic;
                                                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 233px;">Last Name</th>
                                                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 174.6px;">Gender</th>
                                                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Address</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">City</th>
                                                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">District</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Condition</th>
                                                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">NIC</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Mobile</th>
+                                                            
                                 
                                                         </tr>
                                                     </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let data of allPatients">
+                                                            <td>{{data.patientRegNo}}</td>
+                                                            <td>{{data.firstName}}</td> 
+                                                            <td>{{data.lastName}}</td>
+                                                            <td>{{data.gender}}</td>
+                                                            <td>{{data.address}}</td>
+                                                            <td>{{data.district}}</td>
+                                                            <td>{{data.condition}}</td>
+                                                            <td>{{data.nic}}</td>
+                                                            <td>{{data.mobile}}</td>
+     
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>

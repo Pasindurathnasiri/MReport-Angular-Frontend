@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://localhost:44373/api',
-  URI: 'https://localhost:44373/api/'
+  apiBaseUrl: 'http://mreportapi.azurewebsites.net/api',
+  URI: 'http://mreportapi.azurewebsites.net/api/'
 };
 
 /*
