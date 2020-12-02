@@ -20,6 +20,7 @@ export class PatientService {
   }
 
   regPatient(patient:Patient){
+    console.log(patient);
     return this.http.post(environment.apiBaseUrl+'/Patients',patient,this.noAuthHeader);
   }
 }

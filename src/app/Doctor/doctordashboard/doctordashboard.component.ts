@@ -7,6 +7,7 @@ import {DoctorService} from 'src/app/shared/doctor.service';
   templateUrl: './doctordashboard.component.html',
   styleUrls: ['./doctordashboard.component.css']
 })
+
 export class DoctordashboardComponent implements OnInit {
 
   public doctordetail: any = {};

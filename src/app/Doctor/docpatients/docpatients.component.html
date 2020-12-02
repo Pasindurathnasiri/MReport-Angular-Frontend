@@ -7,7 +7,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
-        <title>Doctor_Patient</title>
+        <title>Doctor Patient</title>
     </head>
 
 
@@ -23,7 +23,7 @@
             <div class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 main">
                 <div>
                     <!-- heading -->
-                    <h1 class = "text-uppercase font-weight-bold"><u>Doctor_Patient</u></h1>
+                    <h1 class = "text-uppercase font-weight-bold"><u>Doctor Patient</u></h1>
                     
                     <!-- content -->
                     <table class="table table-striped">
@@ -61,10 +61,11 @@
                     </table>
 
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary">Add Patient</button>
+                        <button class="btn btn-primary" (click) ="regpatient()">Add Patient</button>
                     </div>
                 </div>
-                
+                <br>
+
                 <!-- footer -->
                 <app-footer></app-footer>
                 
