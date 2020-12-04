@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 .docsidebar{
     height: 100%;
     overflow-y: auto;
@@ -20,10 +22,14 @@
     font-style: italic;
 }
 
+hr{
+    background-color: rgb(177, 165, 165);
+}
+
 .link{
     color:white;
-    font-weight: bold;
-    text-transform: uppercase;
+    /* font-weight: bold;
+    text-transform: uppercase; */
 }
 
 .nav-link{
