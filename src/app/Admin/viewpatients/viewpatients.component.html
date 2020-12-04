@@ -213,130 +213,132 @@
                 </a>
               </li>
           </ul>
-          </nav>
-          </div>
-          </aside>
-          </div>
+        </nav>
+      </div>
+      </aside>
          
-          <div class="content-wrapper" style="min-height: 1203.6px;">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-              <div class="container-fluid">
+      <div class="content-wrapper" style="min-height: 1203.6px;">
+        <section class="content-header">
+            <div class="container-fluid">
                 <div class="row mb-2">
-                  <div class="col-sm-6">
-                    <h1>Patient Details</h1>
-                  </div>
-                  <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                      <li class="breadcrumb-item"><a href="https://adminlte.io/themes/dev/AdminLTE/pages/forms/general.html#">Home</a></li>
-                      <li class="breadcrumb-item active">General Form</li>
-                    </ol>
-                  </div>
+                    <div class="col-sm-6">
+                        <h1>Patient Details</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                          <li class="breadcrumb-item"><a href="https://adminlte.io/themes/dev/AdminLTE/pages/forms/general.html#">Home</a></li>
+                          <li class="breadcrumb-item active">General Form</li>
+                        </ol>
+                    </div>
                 </div>
-              </div><!-- /.container-fluid -->
-            </section>
-
-            <section id="f1" class="content" >
-                <div class="container-fluid">
-                  <div class="row">
-                    <!-- left column -->
+            </div>
+        </section>
+        <!-- Main Content -->
+        <section id="f1" class="content">
+            <div class="container-fluid">
+                <div class="row">
                     <div class="col-md-11">
-                      <!-- general form elements -->
-                      <div class="card card-primary">
-                        
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form role="form">
-                          <div class="card-body">
-                            <h4>Find Patient(s):</h4>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Enter Patient Name</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
-                            </div>
-                            
-                                
-                          
-                          <!-- /.card -->
-                
-                          <div class="card">
-                            
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                  <div class="row"><div class="col-sm-12 col-md-6">
-                                      <div class="dataTables_length" id="example1_length">
-                                          </div>
+                        <div class="card card-primary">
+                            <form role="form">
+                                <div class="card-body">
+                                    <h4>Find Patient(s):</h4>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Enter Patient Name</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="dataTables_length" id="example1_length">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 203.4px;">Registration NO</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 262.6px;">First Name</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 233px;">Last Name</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 174.6px;">Gender</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Address</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">District</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Condition</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">NIC</th>
+                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Mobile</th>
+                                                                
+                                    
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let data of allPatients">
+                                                                <td>{{data.patientRegNo}}</td>
+                                                                <td>{{data.firstName}}</td> 
+                                                                <td>{{data.lastName}}</td>
+                                                                <td>{{data.gender}}</td>
+                                                                <td>{{data.address}}</td>
+                                                                <td>{{data.district}}</td>
+                                                                <td>{{data.condition}}</td>
+                                                                <td>{{data.nic}}</td>
+                                                                <td>{{data.mobile}}</td>
+         
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                                <thead>
-                                <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 203.4px;">Registration NO</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 262.6px;">First Name</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 233px;">Last Name</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 174.6px;">Gender</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Address</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">City</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">District</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">NIC</th>
-                                </tr>
-                                </thead>
-                           
-                          </table>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </section>
-                          </div>
-                      
-          
-         
-
- 
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="../dashboardfolder/jquery.min.js.download"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="../dashboardfolder/jquery-ui.min.js.download"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="../dashboardfolder/bootstrap.bundle.min.js.download"></script>
-<!-- ChartJS -->
-<script src="../dashboardfolder/Chart.min.js.download"></script>
-<!-- Sparkline -->
-<script src="../dashboardfolder/sparkline.js.download"></script>
-<!-- JQVMap -->
-<script src="../dashboardfolder/jquery.vmap.min.js.download"></script>
-<script src="../dashboardfolder/jquery.vmap.usa.js.download"></script>
-<!-- jQuery Knob Chart -->
-<script src="../dashboardfolder/jquery.knob.min.js.download"></script>
-<!-- daterangepicker -->
-<script src="../dashboardfolder/moment.min.js.download"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="../dashboardfolder/tempusdominus-bootstrap-4.min.js.download"></script>
-<!-- Summernote -->
-<script src="../dashboardfolder/summernote-bs4.min.js.download"></script>
-<!-- overlayScrollbars -->
-<script src="../dashboardfolder/jquery.overlayScrollbars.min.js.download"></script>
-<!-- AdminLTE App -->
-<script src="../dashboardfolder/adminlte.js.download"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../dashboardfolder/dashboard.js.download"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dashboardfolder/demo.js.download"></script>
-
-
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+    
+    <!-- ./wrapper -->
+    
+    <!-- jQuery -->
+    <script src="../dashboardfolder/jquery.min.js.download"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../dashboardfolder/jquery-ui.min.js.download"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+    $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../dashboardfolder/bootstrap.bundle.min.js.download"></script>
+    <!-- ChartJS -->
+    <script src="../dashboardfolder/Chart.min.js.download"></script>
+    <!-- Sparkline -->
+    <script src="../dashboardfolder/sparkline.js.download"></script>
+    <!-- JQVMap -->
+    <script src="../dashboardfolder/jquery.vmap.min.js.download"></script>
+    <script src="../dashboardfolder/jquery.vmap.usa.js.download"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../dashboardfolder/jquery.knob.min.js.download"></script>
+    <!-- daterangepicker -->
+    <script src="../dashboardfolder/moment.min.js.download"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../dashboardfolder/tempusdominus-bootstrap-4.min.js.download"></script>
+    <!-- Summernote -->
+    <script src="../dashboardfolder/summernote-bs4.min.js.download"></script>
+    <!-- overlayScrollbars -->
+    <script src="../dashboardfolder/jquery.overlayScrollbars.min.js.download"></script>
+    <!-- AdminLTE App -->
+    <script src="../dashboardfolder/adminlte.js.download"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../dashboardfolder/dashboard.js.download"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dashboardfolder/demo.js.download"></script>
+    
+    
+    
