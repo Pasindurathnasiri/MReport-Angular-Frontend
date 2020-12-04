@@ -29,4 +29,8 @@ export class DocpatientsComponent implements OnInit {
     this.router.navigate(['/sa-registerpatient']);
   }
 
+  // Filter table
+
+    
+
 }
