@@ -9,6 +9,7 @@ import { Router} from '@angular/router';
 })
 export class DocpatientsComponent implements OnInit {
 
+  term: string;
   patient_details : any = {};
 
   constructor(

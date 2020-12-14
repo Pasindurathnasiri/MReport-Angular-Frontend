@@ -26,7 +26,7 @@
                     <h1 class = "text-uppercase font-weight-bold"><u>Doctor Patient</u></h1>
                     
                     <!-- serach  -->
-                    <input class="form-control mb-4" id="tableSearch" type="text"
+                    <input class="form-control mb-4" id="tableSearch" type="text" [(ngModel)]="term"
                         placeholder="Type something to search Patient">
 
                     <!-- content -->
@@ -46,7 +46,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor = "let patient of patient_details; let i = index">
+                            <tr *ngFor = "let patient of patient_details | filter:term ; let i = index">
                                 <th scope="row">{{i + 1}}</th>
                                 <td>{{patient.firstName}}</td>
                                 <td>{{patient.firstName}}</td>

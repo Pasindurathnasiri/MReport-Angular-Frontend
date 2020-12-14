@@ -5,98 +5,64 @@
     <div style="background-color: rgb(4, 49, 4);">
 
         <br>
-        <!-- Sidebar user (optional) -->
-        <div class="brand-image img-circle elevation-3" style="text-align: center;">
-            <img class=" shadow-lg rounded-circle" src="../../assets/red_logo.png" alt="Avatar" style="height: 90px;">
+
+        <div class="user-panel mt-3 pb-3 mb-3" style="text-align: center;">
+            <img src="assets/red_logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             id="logo">
+            <!-- <a class="brand-image ">
+                <img style ="height: 20%; width: 20%;" src="../../assets/AdminLTELogo.png"  >
+                <span class="brand-text font-weight-light" id="adlogo">Admin</span>
+            </a> -->
         </div>
 
         <hr>
 
-        <!-- Brand Logo -->
-        <!-- <div class="user-panel mt-3 pb-3 mb-3" style="text-align: center;">
-            <img class="logo" src="../../assets/red_logo.png" alt="Avatar" style="height: 200px;">
-            <a class="brand-image ">
-                <img style ="height: 20%; width: 20%;" src="../../assets/AdminLTELogo.png"  >
-                <span class="brand-text font-weight-light" id="adlogo">Admin</span>
-            </a>
-        </div>
-     -->
         <!-- Sidebar Menu -->
         <nav class="mt-2">
 
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" 
-                role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" 
+                data-widget="treeview" role="menu" data-accordion="false">
 
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
 
-                <li class="nav-item has-treeview menu-open">
-                    <a href="/dd" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p class = "link" >Dashboard</p>
+                <li class="nav-item">
+                    <a routerLink="/dd" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Doctor Dashboard
+                    </p>
                     </a>
                 </li>
             
                 <li class="nav-item">
-                    <a href="/dv" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p class = "link" >Appointments</p>
+                    <a routerLink="/dv" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Doctor Apointments
+                    </p>
                     </a>
                 </li>
-
-                <li class="nav-item has-treeview">
-                    <a href="/dp" class="nav-link">
-                        <p class = "link" >Patients</p>
-                    </a>
-                </li>
-
-                <!-- <li class="nav-item has-treeview">
-                    <a href="scheduleappointments.html" class="nav-link">
-                        <p class = "link" >Schedule Appointments</p>
-                    </a>
-                </li>
-
-                <li class="nav-item has-treeview">
-                    <a href="registerdoctor.html" class="nav-link">
-                        <p class = "link" >Register Doctor</p>
-                    </a>
-                </li>
-
-                <li class="nav-item has-treeview">
-                    <a href="doctorprofile.html" class="nav-link"><i class="nav-icon fas fa-edit"></i>
-                        <p class = "link" >View Doctor Profile</p>
-                    </a>
-                </li>
-
-                <li class="nav-item has-treeview">
-                    <a href="patientaddmi.html" class="nav-link">
-                        <p class = "link" >Patient Admission</p>
-                    </a>
-                </li>
-
-                <li class="nav-item has-treeview">
-                    <a href="reports.html" class="nav-link">
-                        <p class = "link" >Reports</p>
-                    </a>
-                </li>
-
-                <li class="nav-header">EXAMPLES</li>
 
                 <li class="nav-item">
-                    <a href="" class="nav-link">
-                        <p class = "link" >Calendar</p>
+                    <a routerLink="/dp" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Doctor Patient
+                    </p>
                     </a>
-                </li> -->
+                </li>
+
+                <li class="nav-item">
+                    <a routerLink="/add" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Add My Patient
+                    </p>
+                    </a>
+                </li>
                 
             </ul>
         </nav>
     </div>
-
-    <!-- components to be viewd by navbar start -->
-    <!-- <div class="col-md-10" >
-        <app-doctordashboard *ngIf = "truec"></app-doctordashboard>
-        <app-docvaccines></app-docvaccines>
-        <app-docpatients></app-docpatients>
-    </div> -->
-    <!-- components to be viewd by navbar end -->
 </div>
