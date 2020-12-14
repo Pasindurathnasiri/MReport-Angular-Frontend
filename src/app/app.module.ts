@@ -48,6 +48,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   declarations: [
     AppComponent,
