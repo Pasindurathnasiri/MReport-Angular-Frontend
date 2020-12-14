@@ -14,10 +14,6 @@ export class DoctorsidenavComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  
 
-  das(){
-    this.truec = true;
-  }
 
 }
