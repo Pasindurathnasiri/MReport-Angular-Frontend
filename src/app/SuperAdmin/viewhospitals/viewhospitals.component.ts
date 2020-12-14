@@ -9,6 +9,8 @@ import { HospitalService } from '../../shared/hospital.service';
 })
 export class ViewhospitalsComponent implements OnInit {
 
+  term:string;
+
   allHospitals:any =[];
 
   constructor(private hospitalService:HospitalService) {

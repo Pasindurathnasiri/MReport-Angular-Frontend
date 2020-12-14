@@ -46,7 +46,7 @@ import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.comp
 import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
