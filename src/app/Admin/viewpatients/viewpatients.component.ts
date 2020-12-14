@@ -9,6 +9,7 @@ import { PatientService } from 'src/app/shared/patient.service';
 export class ViewpatientsComponent implements OnInit {
 
   allPatients:any =[];
+  term: string;
 
   constructor(private patientService:PatientService) {
 

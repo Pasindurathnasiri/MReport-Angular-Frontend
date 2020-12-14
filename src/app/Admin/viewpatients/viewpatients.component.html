@@ -239,12 +239,12 @@
                 <div class="row">
                     <div class="col-md-11">
                         <div class="card card-primary">
-                            <form role="form">
                                 <div class="card-body">
                                     <h4>Find Patient(s):</h4>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Enter Patient Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                                        <input class="form-control mb-4" id="tableSearch" type="text" [(ngModel)]="term"
+                        placeholder="Type something to search Patient">
                                     </div>
                                 </div>
                                 <div class="card">
@@ -258,43 +258,40 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                                                        <thead>
-                                                            <tr role="row">
-                                                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 203.4px;">Registration NO</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 262.6px;">First Name</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 233px;">Last Name</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 174.6px;">Gender</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Address</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">District</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Condition</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">NIC</th>
-                                                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 123.6px;">Mobile</th>
-                                                                
-                                    
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr *ngFor="let data of allPatients">
-                                                                <td>{{data.patientRegNo}}</td>
-                                                                <td>{{data.firstName}}</td> 
-                                                                <td>{{data.lastName}}</td>
-                                                                <td>{{data.gender}}</td>
-                                                                <td>{{data.address}}</td>
-                                                                <td>{{data.district}}</td>
-                                                                <td>{{data.condition}}</td>
-                                                                <td>{{data.nic}}</td>
-                                                                <td>{{data.mobile}}</td>
-         
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                    <table class="table table-striped">
+                        <thead class="h6">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Patient Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">District</th>
+                                <th scope="col">Condition</th>
+                                <th scope="col">Mobile</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let data of allPatients | filter:term ; let i = index">
+                                <th scope="row">{{i + 1}}</th>
+                                <td>{{data.firstName}}</td>
+                                <td>{{data.lastName}}</td>
+                                <td>{{data.gender}}</td>
+                                <td>{{data.address}}</td>
+                                <td>{{data.district}}</td>
+                                <td>{{data.condition}}</td>
+                                <td>{{data.mobile}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
