@@ -8,6 +8,8 @@ import {PatientService} from '../../shared/patient.service';
 })
 export class ViewpatientComponent implements OnInit {
 
+  public term: string;
+
   allPatients:any =[];
 
   constructor(private patientService:PatientService) {
