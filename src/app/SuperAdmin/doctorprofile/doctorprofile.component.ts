@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DoctorService } from '../../shared/doctor.service';
 
 @Component({
   selector: 'app-doctorprofile',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SADoctorprofileComponent implements OnInit {
 
-  constructor() { }
+  allDoctors:any=[];
+
+
+
+  constructor(private doctorService:DoctorService) { 
+    this.doctorService.getAllDoctors().subscribe(data=>{
+      this.allDoctors=data;
+      console.log(this.allDoctors)
+    })
+
+  }
 
   ngOnInit(): void {
   }

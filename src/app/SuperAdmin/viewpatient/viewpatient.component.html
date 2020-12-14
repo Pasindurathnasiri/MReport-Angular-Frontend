@@ -260,7 +260,7 @@ font-style: italic;
                                 <h4>Find Patient(s):</h4>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Enter Patient Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name" [(ngModel)]="term">
                                 </div>
                             </div>
                             <div class="card">
@@ -291,7 +291,7 @@ font-style: italic;
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr *ngFor="let data of allPatients">
+                                                        <tr *ngFor="let data of allPatients | filter:term">
                                                             <td>{{data.patientRegNo}}</td>
                                                             <td>{{data.firstName}}</td> 
                                                             <td>{{data.lastName}}</td>

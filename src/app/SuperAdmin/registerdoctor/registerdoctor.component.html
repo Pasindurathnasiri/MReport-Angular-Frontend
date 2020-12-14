@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+x`    <!DOCTYPE html>
     <!-- saved from url=(0050)https://adminlte.io/themes/dev/AdminLTE/index.html -->
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -232,11 +232,7 @@
     </nav>
     </div>
     </aside>
-    </div>
-    </body>
-
-
-    <div class="content-wrapper" style="min-height: 1203.6px; margin-left: 10%;">
+    <div class="content-wrapper" style="min-height: 1203.6px; margin-left: 250px;">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
@@ -261,27 +257,24 @@
                        <!-- general form elements -->
                        <div class="card card-primary">
                            <!-- form start -->
-                           <form role="form">
+                           <form [formGroup]="this.docGroup" role="form">
                             <div class="card-body">
                                 <h4>Doctor Informtion:</h4>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Doctor Registration No :</label>
-
-                                </div>
+                                
                                 <div class="row">
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputEmail1" class="formText">First Name</label>
-                                        <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="First Name">
+                                        <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" formControlName="firstName" placeholder="First Name">
                                     </div>
                                     <div class="form-group name2 col-md-4">
                                         <label for="exampleInputPassword1">Last Name</label>
-                                         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+                                         <input type="text" class="form-control" id="exampleInputPassword1" formControlName="lastName" placeholder="Last Name">
                                     </div>
                                     <div class="form-group name3 col-md-4">
                                         <label for="exampleInputPassword1">Gender</label><br>
-                                         <input type="radio" id="male" name="gender" value="male">
+                                         <input type="radio" id="male" name="gender" formControlName="gender" value="male">
                                          <label for="male">Male</label>
-                                         <input type="radio" id="female" name="gender" value="female">
+                                         <input type="radio" id="female" name="gender" formControlName="gender" value="female">
                                          <label for="female">Female</label><br>
                                     </div>
                                 </div>
@@ -294,14 +287,7 @@
                                         <label for="exampleInputPassword1">City</label>
                                         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="City">
                                     </div>
-                                    <div class="form-group name2 col-md-3">
-                                        <label for="exampleInputPassword1">District</label><br>
-                                        <select name="cars" id="cars" form="carform">
-                                         <option value="volvo">Colombo</option>
-                                         <option value="saab">Kelaniya</option>
-                                         <option value="opel">Panadura</option>
-                                        </select>
-                                    </div>
+                                   
                                 </div>
                                 <div class="row">
                                     <div class="form-group name1 col-md-4">
@@ -316,15 +302,15 @@
                                         <label for="exampleInputPassword1">Marital Status</label><br>
                                         <select name="cars" id="cars" form="carform">
                                           <option value="volvo">Single</option>
-                                          <option value="saab"></option>
-                                          <option value="opel"></option>
+                                          <option value="saab">Married</option>
+                                         
                                          </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Contact Number</label>
-                                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Contact Number">
+                                        <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Contact Number">
                                     </div>
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Email</label>
@@ -333,10 +319,10 @@
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Doctor Type</label>
                                         <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm">
-                                            <option value="10">xxx</option>
-                                            <option value="25">eee</option>
-                                            <option value="50">www</option>
-                                            <option value="100">ttt</option>
+                                            <option value="Cardiologist" selected>Cardiologist</option>
+                                            <option value="Neurologist">Neurologist</option>
+                                            <option value="VOG">VOG</option>
+                                            <option value="Dental">Dental</option>
                                         </select>
                                     </div>
                                 </div>
@@ -344,6 +330,11 @@
                                     <label for="exampleInputEmail1" class="formText">Srilanka Medical Countcil Registratione Number</label>
                                     <input type="text" class="form-control" id="slmcno" aria-describedby="emailHelp" placeholder="Srilanka Medical Countcil Registratione Number">
                                 </div>
+                                <div class="row">
+                                    <button (click)="onRegDoctor()" class="btn btn-success">Register</button>&nbsp;
+                                    <button class="btn btn-success">Clear All</button>
+                                </div>
+
 
                             </div>
                            </form>
@@ -352,47 +343,15 @@
                 </div>
             </div>
         </section>
-        <section id="f1" class="content">
-            <div class="container-fluid">
-                <div class="row">
-                     <!-- left column -->
-                     <div class="col-md-11">
-                        <div class="card card-primary">
-                             <!-- /.card-header -->
-                             <!-- form start -->
-                             <form role="form">
-                                <div class="card-body">
-                                    <h4>Primary Qualification:</h4>
-                                    <div class="row">
-                                        <div class="form-group name1 col-md-6">
-                                            <label for="exampleInputEmail1" class="formText">Degree</label>
-                                            <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Degree">
-                                        </div>
-                                        <div class="form-group name2 col-md-6">
-                                            <label for="exampleInputPassword1">Year Of Graduation</label>
-                                             <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Year Of Graduation">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group name2 col-md-6">
-                                            <label for="exampleInputPassword1">University</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="University">
-                                        </div>
-                                        <div class="form-group name2 col-md-6">
-                                            <label for="exampleInputPassword1">Country</label>
-                                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Country">
-                                        </div>
-                                    </div>
-                                </div>
-                             </form>
-                        </div>
-                     </div>
-                </div>
-            </div>
-        </section>
+       
 
     </div>
 
+    </div>
+    </body>
+
+
+   
 
     <!-- ./wrapper -->
 
