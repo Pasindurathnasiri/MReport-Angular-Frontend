@@ -8,6 +8,8 @@ import { DoctorService } from '../../shared/doctor.service';
 })
 export class SADoctorprofileComponent implements OnInit {
 
+  term:string;
+
   allDoctors:any=[];
 
 
