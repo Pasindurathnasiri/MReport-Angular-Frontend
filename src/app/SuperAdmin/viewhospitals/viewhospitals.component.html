@@ -256,12 +256,12 @@ font-style: italic;
             <div class="row">
                 <div class="col-md-11">
                     <div class="card card-primary">
-                        <form role="form">
+                        
                             <div class="card-body">
                                 <h4>Find Hospital(s):</h4>
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Enter Hospital Name</label>
-                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name">
+                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter First Name" [(ngModel)]="term">
                                 </div>
                             </div>
                             <div class="card">
@@ -290,7 +290,7 @@ font-style: italic;
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr *ngFor="let data of allHospitals">
+                                                        <tr *ngFor="let data of allHospitals | filter:term">
                                                             <td>{{data.hosRegNo}}</td>
                                                             <td>{{data.hospitalName}}</td>
                                                             <td>{{data.address}}</td>
@@ -307,7 +307,7 @@ font-style: italic;
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                       
                     </div>
                 </div>
             </div>
