@@ -1,0 +1,48 @@
+.docsidebar{
+    height: 100vh;
+    background-color: rgb(4, 49, 4);
+    position: sticky;
+    z-index: 1000;
+}
+
+.main{
+    position: sticky;
+    height: calc(100vh);
+    overflow-y: auto;
+}
+
+.docpage{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+}
+
+#adlogo{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.link{
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link{
+    background-color: rgb(4, 49, 4);
+    border: none;
+}
+
+.nav-link:active{
+    background-color: rgb(4, 49, 4);
+    border: none;
+}

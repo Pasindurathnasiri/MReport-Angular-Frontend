@@ -35,6 +35,8 @@ import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.com
 import { DocpatientsComponent } from './Doctor/docpatients/docpatients.component';
 import { DoctordashboardComponent } from './Doctor/doctordashboard/doctordashboard.component';
 import { DocvaccinesComponent } from './Doctor/docvaccines/docvaccines.component';
+import { DocapointmentComponent } from './Doctor/docapointment/docapointment.component';
+import { AddpatientComponent } from './Doctor/addpatient/addpatient.component';
 
 const routes: Routes = [
   {path:'',component:FrontpageComponent},
@@ -64,6 +66,8 @@ const routes: Routes = [
   {path:'dp' ,component:DocpatientsComponent},
   {path:'dd' ,component:DoctordashboardComponent},
   {path:'dv' ,component:DocvaccinesComponent},
+  {path:'da' ,component:DocapointmentComponent},
+  {path:'daddp' ,component:AddpatientComponent},
  
   
   
@@ -78,7 +82,9 @@ export class AppRoutingModule {}
  export const RoutingComponents= [ 
                                     DocpatientsComponent,
                                     DoctordashboardComponent,
-                                    DocvaccinesComponent
+                                    DocvaccinesComponent,
+                                    DocapointmentComponent,
+                                    AddpatientComponent,
                                     
 
  ]

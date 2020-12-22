@@ -45,11 +45,6 @@ import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.com
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,6 +84,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     DoctorsidenavComponent,
     FooterComponent,
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
