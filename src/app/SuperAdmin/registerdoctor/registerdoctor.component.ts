@@ -61,11 +61,12 @@ export class SARegisterdoctorComponent implements OnInit {
         
         
       }
+      this.imgUpload(files)
     });
 
-    this.imgUpload(files)
+    
     window.alert("Doctor Details Registered Successfully..!");
-    location.reload();
+    //location.reload();
   }
 
   //upload image

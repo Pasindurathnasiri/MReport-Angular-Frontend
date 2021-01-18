@@ -281,26 +281,26 @@ x`    <!DOCTYPE html>
                                 <div class="row">
                                     <div class="form-group name2 col-md-6">
                                         <label for="exampleInputPassword1">Address</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Address">
+                                        <input type="text" class="form-control" formControlName="address" id="exampleInputPassword1" placeholder="Address">
                                     </div>
                                     <div class="form-group name2 col-md-3">
                                         <label for="exampleInputPassword1">City</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="City">
+                                        <input type="text" class="form-control" formControlName="" id="exampleInputPassword1" placeholder="City">
                                     </div>
                                    
                                 </div>
                                 <div class="row">
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">NIC</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="NIC">
+                                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="nic" placeholder="NIC">
                                     </div>
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Date Of Birth</label>
-                                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="City">
+                                        <input type="date" class="form-control" id="exampleInputPassword1" formControlName="dob" placeholder="Date of Birth">
                                     </div>
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Marital Status</label><br>
-                                        <select name="cars" id="cars" form="carform">
+                                        <select name="cars" formControlName="maritalState" id="cars" form="carform">
                                           <option value="volvo">Single</option>
                                           <option value="saab">Married</option>
                                          
@@ -310,15 +310,15 @@ x`    <!DOCTYPE html>
                                 <div class="row">
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Contact Number</label>
-                                        <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Contact Number">
+                                        <input type="tel" formControlName="mobile" class="form-control" id="exampleInputPassword1" placeholder="Contact Number">
                                     </div>
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                        <input type="email" fromControlName="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
                                     </div>
                                     <div class="form-group name1 col-md-4">
                                         <label for="exampleInputPassword1">Doctor Type</label>
-                                        <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm">
+                                        <select name="example1_length" formControlName="spArea" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm">
                                             <option value="Cardiologist" selected>Cardiologist</option>
                                             <option value="Neurologist">Neurologist</option>
                                             <option value="VOG">VOG</option>
@@ -328,7 +328,7 @@ x`    <!DOCTYPE html>
                                 </div>
                                 <div class="form-group name1 col-md-6">
                                     <label for="exampleInputEmail1" class="formText">Srilanka Medical Countcil Registratione Number</label>
-                                    <input type="text" class="form-control" id="slmcno" aria-describedby="emailHelp" placeholder="Srilanka Medical Countcil Registratione Number">
+                                    <input type="text" class="form-control" formControlName="medRegNo" id="slmcno" aria-describedby="emailHelp" placeholder="Srilanka Medical Countcil Registratione Number">
                                 </div>
                                 <div class="form-group name1 col-md-6">
                                     <label class="formText">Choose Image</label>
