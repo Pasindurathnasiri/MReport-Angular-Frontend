@@ -330,15 +330,20 @@ x`    <!DOCTYPE html>
                                     <label for="exampleInputEmail1" class="formText">Srilanka Medical Countcil Registratione Number</label>
                                     <input type="text" class="form-control" id="slmcno" aria-describedby="emailHelp" placeholder="Srilanka Medical Countcil Registratione Number">
                                 </div>
+                                <div class="form-group name1 col-md-6">
+                                    <label class="formText">Choose Image</label>
+                                    <input type="file" (change)="handleFileInput($event.target.files)" #file accept="image/*" class="form-control" aria-describedby="Image Upload" placeholder="Upload Image">
+                                    <img [src]="imageUrl" style="width:250px; height:200px;">
+                                </div>
                                 <div class="row">
-                                    <button (click)="onRegDoctor()" class="btn btn-success">Register</button>&nbsp;
+                                    <button (click)="onRegDoctor(file.files)" class="btn btn-success">Register</button>&nbsp;
                                     <button class="btn btn-success">Clear All</button>
                                 </div>
 
 
                             </div>
                            </form>
-                       </div>
+                       </div>   
                    </div>
                 </div>
             </div>
