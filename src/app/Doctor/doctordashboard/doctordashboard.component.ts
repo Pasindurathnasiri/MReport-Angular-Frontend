@@ -25,6 +25,16 @@ export class DoctordashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(d){
+    console.log(d.id);
+    if(window.confirm('Are you sure you want to delete this Doctor?')){
+      const data = this.doctordetail.data;
+      this.doctorservice.deleteDoctor(d.id).subscribe();
+    }
+    window.alert("Doctor Deleted Successfully..!");
+    location.reload();
+  }
+
   
 
 }

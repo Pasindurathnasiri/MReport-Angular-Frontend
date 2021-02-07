@@ -21,7 +21,7 @@
 
           <div class="col-12 col-md-9 col-xl-10 py-md-3 pl-md-5 main">
 
-              <div *ngFor = "let doctor of doctordetail;">
+              
                   <!-- heading -->
                   <h1 class = "text-uppercase font-weight-bold"><u>Doctor DashBoard </u></h1>
                   
@@ -36,20 +36,23 @@
                                 <li class="breadcrumb-item active" aria-current="page">Doctor Profile</li>
                               </ol>
                             </nav>
+                      </div>
+                  </div>
+                  
                             <!-- /Breadcrumb -->
-                      
+                            <div *ngFor = "let doctor of doctordetail;">
                             <div class="row gutters-sm">
                               <div class="col-md-4 mb-3">
                                 <div class="card">
                                   <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                      <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                      <img src={{doctor.imgPath}} alt="Admin" class="rounded-circle" width="150">
                                       <div class="mt-3">
                                         <h4>{{doctor.title}}</h4>
                                         <p class="text-secondary mb-1">{{doctor.spArea}}</p>
                                         <p class="text-muted font-size-sm">{{doctor.address}}</p>
                                         <button class="btn" style="background-color:  rgb(4, 49, 4); color: #ffff;">Update</button>
-                                        <button class="btn btn-outline-danger">Delate</button>
+                                        <button class="btn btn-outline-danger" (click)="onDelete(doctor)">Delete</button>
                                       </div>
                                     </div>
                                   </div>
@@ -190,13 +193,13 @@
                                   </div>
                                 </div> -->
                               </div>
-                            </div>
-                          </div>
+                            
+                      
                   </div>
               </div>
 
               <!-- footer -->
-              <app-footer></app-footer>
+              <!-- <app-footer></app-footer> -->
                 
             </div>
         </div>
