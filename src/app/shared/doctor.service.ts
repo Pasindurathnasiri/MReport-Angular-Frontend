@@ -4,13 +4,14 @@ import { HttpClient, HttpErrorResponse, HttpHeaders,HttpResponse } from '@angula
 import { environment } from 'src/environments/environment';
 import { map,catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
+import { error } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DoctorService {
   
-
+  headers = new HttpHeaders().set('Content-Type','application/json');
   noAuthHeader = { headers: new HttpHeaders({ 'NoAuth': 'True' }) };
 
   constructor(private http: HttpClient) { }
@@ -27,14 +28,14 @@ export class DoctorService {
     var API_URL=`${environment.apiBaseUrl}/Doctors/${id}`;
     return this.http.delete(API_URL).pipe(catchError(this.errorMgmt))
   }
-/*
-  DeleteTransaction(id):Observable<any>{
-    var API_URL=`${this.endpoint}/delete-transaction/${id}`;
-    return this.http.delete(API_URL)
-    .pipe(
-      catchError(this.errorMgmt)
-    )
-  }*/
+
+  updateDoctor(id,data):Observable<any>{
+    let API_URL = `${environment.apiBaseUrl}/Doctors/${id}`;
+    return this.http.put(API_URL,data,{headers:this.headers})
+    .pipe(catchError(this.errorMgmt))
+  }
+
+
 
   errorMgmt(error: HttpErrorResponse) {
     let errorMessage = '';

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscriber } from 'rxjs';
 import {DoctorService} from 'src/app/shared/doctor.service';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import {UpdatedoctorComponent} from '../updatedoctor/updatedoctor.component'
 
 @Component({
   selector: 'app-doctordashboard',
@@ -12,7 +14,7 @@ export class DoctordashboardComponent implements OnInit {
 
   public doctordetail: any = {};
 
-  constructor(private doctorservice : DoctorService) {
+  constructor(private doctorservice : DoctorService,private _bottomSheet:MatBottomSheet,private _bottomSheetRef:MatBottomSheetRef) {
     
     this.doctorservice.getAllDoctors().subscribe( data =>{
       console.log(data);
@@ -35,6 +37,16 @@ export class DoctordashboardComponent implements OnInit {
     location.reload();
   }
 
+  onUpdate(d){
+    this._bottomSheet.open(UpdatedoctorComponent,{panelClass:'custom-width',data:d})
+
+  }
+
+  // updateEquipment(index :number,e){
+  //   this._bottomSheet.open(UpdateEquipmentComponent,{panelClass:'custom-width',data:e})
+  
+  // }
+  
   
 
 }

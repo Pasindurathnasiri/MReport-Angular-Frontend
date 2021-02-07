@@ -51,7 +51,7 @@
                                         <h4>{{doctor.title}}</h4>
                                         <p class="text-secondary mb-1">{{doctor.spArea}}</p>
                                         <p class="text-muted font-size-sm">{{doctor.address}}</p>
-                                        <button class="btn" style="background-color:  rgb(4, 49, 4); color: #ffff;">Update</button>
+                                        <button class="btn" style="background-color:  rgb(4, 49, 4); color: #ffff;" (click)="onUpdate(doctor)">Update</button>
                                         <button class="btn btn-outline-danger" (click)="onDelete(doctor)">Delete</button>
                                       </div>
                                     </div>

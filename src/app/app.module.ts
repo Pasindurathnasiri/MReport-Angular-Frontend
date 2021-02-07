@@ -11,6 +11,8 @@ import { fromEventPattern } from 'rxjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
 
 import { PatientaboutdocComponent } from './Patient/patientaboutdoc/patientaboutdoc.component';
 import { PatientaboutdocspecialistsComponent } from './Patient/patientaboutdocspecialists/patientaboutdocspecialists.component';
@@ -45,6 +47,7 @@ import { SaDashboardComponent } from './SuperAdmin/sa-dashboard/sa-dashboard.com
 import { Admissionpatient } from './Admin/admissionpatient/admissionpatient.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UpdatedoctorComponent } from './Doctor/updatedoctor/updatedoctor.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     SADoctorprofileComponent,
     DoctorsidenavComponent,
     FooterComponent,
+    UpdatedoctorComponent,
   ],
   
   imports: [
@@ -94,11 +98,16 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    MatBottomSheetModule,
     HttpClientModule,
     Ng2SearchPipeModule
     
   ],
-  providers: [],
+  exports:[MatBottomSheetModule],
+  providers: [{ provide: MAT_BOTTOM_SHEET_DATA, useValue: {} },
+    { provide: MatBottomSheetRef, useValue: {} }
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
