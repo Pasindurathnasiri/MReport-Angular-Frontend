@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpEventType, HttpClient } from '@angular/common/http';
 import {DoctorService} from '../../shared/doctor.service';
 import {FormControl, FormBuilder, FormGroup ,Validators, NgForm} from '@angular/forms';
+import { Observable, Subscriber } from 'rxjs';
 
 
 
@@ -13,6 +14,7 @@ import {FormControl, FormBuilder, FormGroup ,Validators, NgForm} from '@angular/
 export class SARegisterdoctorComponent implements OnInit {
 
   imageUrl : string ="../../../assets/upload.png";
+  imgUrl : string;
   fileToUpload : File = null;
   showSucessMessage: boolean;
   serverErrorMessages: string;
@@ -25,6 +27,8 @@ export class SARegisterdoctorComponent implements OnInit {
   public readonly docGroup:FormGroup;
   
   AllDoctors: any =[];
+  naturalHeight: number;
+  naturalWidth: number;
 
   constructor(private doctorService:DoctorService,private formBuilder: FormBuilder,private http: HttpClient) {
 
@@ -41,7 +45,8 @@ export class SARegisterdoctorComponent implements OnInit {
       email: [],
       title: [],
       password: [],
-      mobile: []
+      mobile: [],
+      imgPath:[]
      })
 
    }
@@ -52,6 +57,7 @@ export class SARegisterdoctorComponent implements OnInit {
   onRegDoctor(files){
     this.doctorService.regDoctor(this.docGroup.value).subscribe(res=>{
       console.log(res);
+      
     },
     err=>{
       if(err){
@@ -61,36 +67,21 @@ export class SARegisterdoctorComponent implements OnInit {
         
         
       }
-      this.imgUpload(files)
+      
+     
     });
-
+    
     
     window.alert("Doctor Details Registered Successfully..!");
-    //location.reload();
+    location.reload();
   }
 
   //upload image
-  public imgUpload = (files)=>{
-    if (files.length === 0) {
-      return;
-    }
-
-    let fileToUpload = <File>files[0];
-    const formData = new FormData();
-    formData.append('file', fileToUpload, fileToUpload.name);
-
-    this.http.post('https://localhost:44373/api/Upload', formData, {reportProgress: true, observe: 'events'})
-      .subscribe(event => {
-        if (event.type === HttpEventType.UploadProgress)
-          this.progress = Math.round(100 * event.loaded / event.total);
-        else if (event.type === HttpEventType.Response) {
-          this.message = 'Upload success.';
-          this.onUploadFinished.emit(event.body);
-        }
-      });
-  } 
+ 
 
   handleFileInput(file: FileList){
+    
+    
     this.fileToUpload = file.item(0);
 
     //show image review
@@ -98,8 +89,36 @@ export class SARegisterdoctorComponent implements OnInit {
     reader.onload = (event:any) =>{
       this.imageUrl = event.target.result;
     }
-
+    
     reader.readAsDataURL(this.fileToUpload);
+    this.convertToBase64(this.fileToUpload);
+    
+  }
+
+  convertToBase64(file:File){
+    const observable = new Observable((subscriber:Subscriber<any>)=>{
+    this.readFile(file,subscriber)
+    });
+    observable.subscribe((d)=>{
+      console.log(d);
+      this.docGroup.value.imgPath=d;
+      
+    })
+  }
+
+  readFile(file:File,subscriber:Subscriber<any>){
+    const filereader = new FileReader();
+    filereader.readAsDataURL(file);
+
+    filereader.onload =()=>{
+      subscriber.next(filereader.result);
+      subscriber.complete();
+    }
+
+    filereader.onerror = (error)=>{
+      subscriber.error(error);
+      subscriber.complete();
+    }
 
   }
 

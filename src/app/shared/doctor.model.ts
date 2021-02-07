@@ -12,5 +12,6 @@ export class Doctor {
   title: string;
   password: string;
   mobile: string;
+  imgPath:string;
     
 }
